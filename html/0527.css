@@ -1,0 +1,556 @@
+@charset 'utf-8';
+
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  font-family: 'SUIT-Medium';
+}
+
+body {
+  margin: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width:1001px) {
+.hd {
+    border: 1px solid red;
+    background-color: #111;
+    padding: 1rem 9rem;
+}
+.hd .logo {
+    width: 8%;
+}
+.hd .logo img {
+    width: 100%;
+}
+}
+
+@media (max-width:1000px) {
+
+body {
+    /* max-width: 500px; */
+    background-color: #111;
+}
+
+.hd {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    margin: 0 20px;
+    width: 20%;
+}
+.logo img {
+    width: 100%;
+}
+
+.gnb {
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    z-index: -1;
+}
+
+.gnb_a {
+    padding-top: 6rem;
+    height: 100vh;
+}
+
+
+.gnb_a * {
+    color: white;
+}
+
+.gnb_a li {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin: 20px;
+}
+
+.gnb_a li button {
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.gnb_sp {
+    display: none;
+}
+
+
+
+.ham {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+
+.ham span {
+    background-color: white;
+    display: flex;
+    width: 25px;
+    height: 3px;
+    margin: 10px;
+    color: transparent;
+}
+
+.close {
+    display: none;
+    position: absolute;
+    right: 33px;
+    top: 35px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.close span {
+    display: flex;
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: -3px;
+    color: transparent;
+    transition: .5s;
+}
+
+.close span:nth-of-type(1) {
+    transform: rotate(-45deg);
+}
+.close span:nth-of-type(2) {
+    transform: rotate(45deg);
+}
+
+.sec1 {
+    height: 150vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.vid {
+    height: 100%;
+    position: absolute;
+    left: -430px;
+    z-index: -1;
+}
+
+.sp {
+    width: calc(100% - 40px);
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+    line-height: 40px;
+}
+
+.sp span:nth-of-type(1) {
+    font-size: 1.6rem;
+}
+.sp span:nth-of-type(2) {
+    font-size: 2rem;
+}
+
+.sp span:nth-of-type(3),
+.sp span:nth-of-type(4) {
+    font-size: 1.2rem;
+}
+
+.but {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,-15%);
+    transform: rotate(-90deg);
+    background-color: transparent;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+    animation-name: scroll_ani1;
+    animation-duration: 1.2s;
+    animation-timing-function:ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll_ani1 {
+    0% {bottom: 5%;}
+    100% {bottom: 3%; opacity: 0.3;}
+}
+
+.but::after {
+    content: "<";
+}
+
+.sec2 {
+    height: 150vw;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+
+.sec2 .vid2 {
+    position: absolute;
+    left: -650px;
+}
+.sec2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.sec2 .sp2 {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+    line-height: 50px;
+    margin: 0 20px;
+}
+
+.sec2 .sp2 span {
+    color: white;
+    z-index: 100;
+}
+
+.sec2 .sp2 span:nth-of-type(1),
+.sec2 .sp2 span:nth-of-type(3) {
+    font-size: 1.3rem;
+}
+.sec2 .sp2 span:nth-of-type(2) {
+    font-size: 3rem;
+}
+.but2 {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%,-15%);
+    transform: rotate(-90deg);
+    background-color: transparent;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+    animation-name: scroll_ani2;
+    animation-duration: 1.2s;
+    animation-timing-function:ease;
+    animation-iteration-count: infinite;
+    z-index: 100;
+}
+
+@keyframes scroll_ani2 {
+    0% {bottom: 5%;}
+    100% {bottom: 3%; opacity: 0.3;}
+}
+
+.but2::after {
+    content: "<";
+}
+
+.sec2 .sp2_1 {
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.sec2 .sp2_1 span {
+    z-index: 100;
+    color: white;
+    margin: 15px 20px;
+}
+
+
+/* sec2 end */
+
+/* sec3 start */
+
+.sec3 {
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+
+.sec3_sp {
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    color:white;
+    height: 90px;
+    font-size: 1.4rem;
+}
+
+.noti {
+    
+    height: 280px;
+    position: relative;
+}
+
+.noti_teb {
+    display: flex;
+    justify-content: center;
+}
+
+.noti_teb .teb_title {
+    cursor: pointer;
+    margin: 3rem 0 0 0;
+    padding: 2rem 3rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    color: white;
+}
+
+.noti_teb .teb_title:hover {
+    border-bottom: 3px solid white;
+}
+
+.title1.on,
+.title2.on,
+.title3.on,
+.title4.on,
+.title5.on {
+    border-bottom: 3px solid white;
+}
+
+
+.noti_list_1,
+.noti_list_2,
+.noti_list_3 {
+    padding: 10rem 0;
+    position: relative;
+}
+
+.noti_list_1 ul {
+    position: absolute;
+    display: flex;
+    width: 800%;
+    background-color: rgba(50,50,50,0.3);
+}
+.noti .noti_list_1 ul::after,
+.noti .noti_list_2 ul::after,
+.noti .noti_list_3 ul::after {
+    content: "";
+    position: absolute;
+    bottom: 17px;
+    left: 60px;
+    margin: auto;
+    height: 20%;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.4);
+    background-color: rgba(30,30,30);
+    z-index: -1;
+}
+
+
+.noti .noti_list_1 ul::after {
+    width: 10%; 
+}
+
+
+.noti .noti_list_2 ul::after,
+.noti .noti_list_3 ul::after{
+    width: 20%;
+}
+
+.noti_list_1 ul li,
+.noti_list_2 ul li,
+.noti_list_3 ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.noti_list_1 ul li img,
+.noti_list_2 ul li img,
+.noti_list_3 ul li img {
+    width: 100%;
+}
+
+.noti .bu_l {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+}
+
+.noti .bu_r {
+    position: absolute;
+    bottom: 0;
+    left: 9%;
+}
+
+
+.bu_see,
+.bu_see2,
+.bu_see3 {
+    position: absolute;
+    bottom: -80%;
+    left: 50%;
+    transform: translate(-50%, 80%);
+    font-size: 1.6rem;
+    
+}
+
+
+.noti_list_2 ul {
+    position: absolute;
+    display: flex;
+    width: 400%;
+    background-color: rgba(50,50,50,0.3);
+}
+
+.noti .bu2_l {
+    position: absolute;
+    bottom: 0;
+    left: 6%;
+}
+
+.noti .bu2_r {
+    position: absolute;
+    bottom: 0;
+    left: 18%;
+}
+
+
+
+.noti_list_3 ul{
+    position: absolute;
+    display: flex;
+    width: 400%;
+    background-color: rgba(50,50,50,0.3);
+}
+
+.noti_list_3 ul li {
+    width: 100%;
+}
+
+.noti .bu3_l {
+    position: absolute;
+    bottom: 0;
+    left: 6%;
+}
+
+.noti .bu3_r {
+    position: absolute;
+    bottom: 0;
+    left: 18%;
+}
+
+.noti>div {
+    display: none;
+}
+.noti>div:nth-of-type(1) {
+    display: flex;
+}
+.noti>div.on {
+    display: block;
+}
+
+.noti button {
+    border: transparent;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* sec3 end */
+
+/* sec4 start */
+
+.sec4 {
+    padding-top: 4rem;
+    position: relative;
+}
+
+.sec4 * {
+    color: white;
+}
+
+.sec4 h2 {
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+    padding-left: 20px;
+}
+
+.sec4 span {
+    padding: 0 20px;
+    font-size: 0.9rem;
+}
+
+.sec4 img {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.sec4 button {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+}
+
+.event button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.service {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+}
+
+.ser_sp {
+    display: flex;
+}
+
+.service button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* sec4 end */
+
+
+
+}
